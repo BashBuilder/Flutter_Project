@@ -16,9 +16,20 @@ class WidgetTree extends StatelessWidget {
         title: Text("Home Page"),
         centerTitle: true,
         backgroundColor: Colors.teal,
+        actions: [
+          IconButton(
+            onPressed: () {
+              isDarkModeNotifier.value = !isDarkModeNotifier.value;
+            },
+            icon: ValueListenableBuilder(
+              valueListenable: isDarkModeNotifier,
+              builder: (context, isDarkMode, child) {
+                return Icon(isDarkMode ? Icons.dark_mode : Icons.light_mode);
+              },
+            ),
+          ),
+        ],
       ),
-
-      // body: pages.elementAt(0),
       body: ValueListenableBuilder(
         valueListenable: selectedPageNotifier,
         builder: (context, selectedpage, child) {
