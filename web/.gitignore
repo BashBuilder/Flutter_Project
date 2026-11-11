@@ -1,0 +1,10 @@
+# Miscellaneous & IDEs
+*.class, *.log, *.pyc, *.swp, .DS_Store, .idea/, *.iml, .history, .svn/
+# .vscode/ # Uncomment if you want to share VS Code launch configs
+
+# Flutter / Dart / Pub
+.dart_tool/, .packages, .pub/, .flutter-plugins, build/, **/doc/api/
+/android/app/{debug,profile,release}, **/android/local.properties, *.jks
+**/ios/Flutter/{App.framework,Flutter.framework,ephemeral}, **/ios/Pods/
+**/macos/Pods/, **/windows/flutter/ephemeral/, **/linux/flutter/ephemeral/
+coverage/, .env
