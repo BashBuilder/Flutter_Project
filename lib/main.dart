@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/views/widget_tree.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,26 +19,7 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
         ), //ColorScheme.fromseed
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Home Page"),
-          centerTitle: true,
-          backgroundColor: Colors.teal,
-          // actions: [
-          //   // Text("Perform something"),
-          //   Icon(Icons.login),
-          // ],
-        ),
-
-        bottomNavigationBar: NavigationBar(
-          destinations: [
-            NavigationDestination(icon: Icon(Icons.home), label: "Home"),
-            NavigationDestination(icon: Icon(Icons.person), label: "Profile"),
-          ],
-          onDestinationSelected: (value) => print(value),
-          selectedIndex: 0,
-        ),
-      ),
+      home: WidgetTree(),
     );
   }
 }
